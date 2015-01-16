@@ -5,7 +5,7 @@
 A minimalistic option parser for Python inspired by substack's [minimist](http://github.com/substack/minimist) for node.js.
 
 ## API
-### minopt(argv[, opts]])
+### minopt(argv[, opts])
 This function takes a list of strings and parses them as if they were sys.argv.
 
 Example:
