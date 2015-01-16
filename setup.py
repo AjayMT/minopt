@@ -9,6 +9,7 @@ setup(
     author='Ajay MT',
     author_email='ajaymt@icloud.com',
     url='http://github.com/ajaymt/minopt',
+    download_url='https://github.com/AjayMT/minopt/tarball/v0.0.1',
     py_modules=['minopt'],
     keywords='option-parser option parser optparse argparse command line',
     classifiers=[
