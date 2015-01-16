@@ -1,5 +1,7 @@
 
 # minopt
+[![Build Status](https://travis-ci.org/AjayMT/minopt.svg)](https://travis-ci.org/AjayMT/minopt)
+
 A minimalistic option parser for Python inspired by substack's [minimist](http://github.com/substack/minimist) for node.js.
 
 ## API
