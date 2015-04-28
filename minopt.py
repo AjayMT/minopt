@@ -15,8 +15,8 @@ def minopt(argv, opts={'string': [], 'boolean': []}):
       which are mapped to a list of arguments to always be
       treated as strings and flags respectively
     """
-    opts['string'] = [] if not 'string' in opts
-    opts['boolean'] = [] if not 'boolean' in opts
+    opts['string'] = [] if 'string' not in opts else opts['string']
+    opts['boolean'] = [] if 'boolean' not in opts else opts['boolean']
 
     args = {}
     optargs = {i: a for i, a in enumerate(argv) if a[0] == '-'}
