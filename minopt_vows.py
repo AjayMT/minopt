@@ -2,12 +2,14 @@
 from pyvows import Vows, expect
 from minopt import minopt
 
+
 @Vows.batch
 class Minopt(Vows.Context):
     def topic(self):
         return minopt(['--baz', 'hello', '--foo', 'bar', '-baz',
                        '--riff=wobble', '--hey', '-ho', 'world'],
-                      {'string': ['a', 'hey'], 'boolean': ['baz', 'h', 'o']})
+                      {'string': ['a', 'hey', 'w'],
+                       'boolean': ['baz', 'h', 'o', 'q']})
 
     def should_parse_long_arguments(self, topic):
         expect(topic['foo']).to_equal('bar')
@@ -28,3 +30,7 @@ class Minopt(Vows.Context):
 
     def should_parse_unnamed_args(self, topic):
         expect(topic['_']).to_equal(['hello', 'world'])
+
+    def should_set_all_args(self, topic):
+        expected = ('', False)
+        expect((topic['w'], topic['q'])).to_equal(expected)

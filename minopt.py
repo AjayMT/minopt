@@ -43,4 +43,8 @@ def minopt(argv, opts={'string': [], 'boolean': []}):
     unnamed = args['_']
     args['_'] = [unnamed[i] for i in sorted(unnamed)]
 
+    for a in opts['boolean'] + opts['string']:
+        if a not in args:
+            args[a] = False if a in opts['boolean'] else ''
+
     return args
